@@ -5,6 +5,8 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 import javax.persistence.*;
 
@@ -51,5 +53,11 @@ public class OrderItem {
      */
     public int getTotalPrice() {
         return getOrderPrice() * getCount();
+    }
+
+    @Override
+    public String toString() {
+        return new ReflectionToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE)
+                .toString();
     }
 }

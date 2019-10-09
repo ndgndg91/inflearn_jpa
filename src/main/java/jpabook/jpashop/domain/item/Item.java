@@ -3,6 +3,8 @@ package jpabook.jpashop.domain.item;
 import jpabook.jpashop.domain.Category;
 import jpabook.jpashop.exception.NotEnoughStcokException;
 import lombok.Getter;
+import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -11,7 +13,7 @@ import java.util.List;
 @DiscriminatorColumn(name = "dtype")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Entity
-@Getter
+@Getter @Setter
 public abstract class Item {
 
     @Id @GeneratedValue
@@ -40,7 +42,7 @@ public abstract class Item {
     public void removeStock(int stockQuantity){
         int restStock = this.stockQuantity - stockQuantity;
 
-        if (this.stockQuantity < 0) {
+        if (restStock < 0) {
             throw new NotEnoughStcokException("need more stock");
         }
 
