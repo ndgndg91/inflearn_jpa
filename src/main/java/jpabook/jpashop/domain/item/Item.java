@@ -10,6 +10,7 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Slf4j
 @DiscriminatorColumn(name = "dtype")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Entity
@@ -40,7 +41,9 @@ public abstract class Item {
      * 재고 수량을 감소
      */
     public void removeStock(int stockQuantity){
+        log.info("{}", stockQuantity);
         int restStock = this.stockQuantity - stockQuantity;
+        log.info("{}", restStock);
 
         if (restStock < 0) {
             throw new NotEnoughStcokException("need more stock");

@@ -37,7 +37,7 @@ public class OrderRepository {
         String jpql = "select o From " + Order.class.getName() + " o join o.member m";
         boolean isFirstCondition = true;
         //주문 상태 검색
-        if (orderSearch.getStatus() != null) {
+        if (orderSearch.getOrderStatus() != null) {
             if (isFirstCondition) {
                 jpql += " where";
                 isFirstCondition = false;
@@ -57,8 +57,8 @@ public class OrderRepository {
             jpql += " m.name like :name";
         }
         TypedQuery<Order> query = em.createQuery(jpql, Order.class).setMaxResults(1000); //최대 1000건
-        if (orderSearch.getStatus() != null) {
-            query = query.setParameter("status", orderSearch.getStatus());
+        if (orderSearch.getOrderStatus() != null) {
+            query = query.setParameter("status", orderSearch.getOrderStatus());
         }
         if (StringUtils.hasText(orderSearch.getMemberName())) {
             query = query.setParameter("name", orderSearch.getMemberName());
@@ -79,9 +79,9 @@ public class OrderRepository {
         Join<Order, Member> m = o.join("member", JoinType.INNER); //회원과 조인
         List<Predicate> criteria = new ArrayList<>();
         //주문 상태 검색
-        if (orderSearch.getStatus() != null) {
+        if (orderSearch.getOrderStatus() != null) {
             Predicate status = cb.equal(o.get("status"),
-                    orderSearch.getStatus());
+                    orderSearch.getOrderStatus());
             criteria.add(status);
         }
         //회원 이름 검색
