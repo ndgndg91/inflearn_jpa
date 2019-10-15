@@ -17,7 +17,7 @@ public class ItemRepository {
         if (item.getId() == null) {
             em.persist(item);
         } else {
-            em.merge(item);
+            em.merge(item);// 빈 필드는 null 로 업데이트 할 수 있기 때문에 위험하다.
         }
     }
 
