@@ -35,7 +35,7 @@ public class MemberServiceTest {
 
         //then
         assertEquals(member, memberRepository.findOne(savedId));
-        Assertions.assertThat(member).isNotEqualTo(memberRepository.findOne(savedId));
+        Assertions.assertThat(member).isEqualTo(memberRepository.findOne(savedId));
      }
      
      @Test(expected = IllegalStateException.class)
