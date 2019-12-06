@@ -15,6 +15,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
+    - name: run test code
+      run: ./gradlew test
     - name: Login to DockerHub Registry
       run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
     - name: build image and push
