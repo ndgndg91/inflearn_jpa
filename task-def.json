@@ -53,7 +53,6 @@
   ],
   "placementConstraints": [],
   "family": "jpashop",
-  "pidMode": "task",
   "requiresCompatibilities": [
     "FARGATE"
   ],
