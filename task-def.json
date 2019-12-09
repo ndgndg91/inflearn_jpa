@@ -1,5 +1,4 @@
 {
-  "ipcMode": "task",
   "executionRoleArn": "arn:aws:iam::502697621694:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
