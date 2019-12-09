@@ -48,6 +48,10 @@
     "FARGATE"
   ],
   "networkMode": "awsvpc",
-  "inferenceAccelerators": [],
+  "cpu": "512",
+  "revision": 1,
+  "status": "ACTIVE",
+  "inferenceAccelerators": null,
+  "proxyConfiguration": null,
   "volumes": []
 }
