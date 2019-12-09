@@ -32,7 +32,7 @@
       "memoryReservation": 512,
       "volumesFrom": [],
       "stopTimeout": 2,
-      "image": "502697621694.dkr.ecr.us-west-2.amazonaws.com/ndgndg91-jpashop:81509812c2ef5be0b460e7f35a57754ae9e712f0",
+      "image": "502697621694.dkr.ecr.us-west-2.amazonaws.com/ndgndg91-jpashop:latest",
       "startTimeout": 2,
       "dependsOn": [],
       "interactive": true,
