@@ -7,7 +7,7 @@
         "logDriver": "awslogs",
         "secretOptions": [],
         "options": {
-          "awslogs-group": "/ecs/first-run-task-definition",
+          "awslogs-group": " /ecs/jpashop-task-def",
           "awslogs-region": "us-west-2",
           "awslogs-stream-prefix": "ecs"
         }
