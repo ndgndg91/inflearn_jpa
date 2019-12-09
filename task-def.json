@@ -55,7 +55,7 @@
   "family": "jpashop",
   "pidMode": "task",
   "requiresCompatibilities": [
-    "EC2"
+    "FARGATE"
   ],
   "networkMode": "bridge",
   "inferenceAccelerators": [],
