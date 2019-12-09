@@ -1,8 +1,19 @@
 {
   "ipcMode": "task",
+  "executionRoleArn": "arn:aws:iam::502697621694:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
       "dnsSearchDomains": [],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "secretOptions": [],
+        "options": {
+          "awslogs-group": "/ecs/jpashop-task-def",
+          "awslogs-region": "us-west-2",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "entryPoint": [],
       "portMappings": [
         {
           "hostPort": 8080,
@@ -49,8 +60,6 @@
   ],
   "networkMode": "awsvpc",
   "cpu": "512",
-  "revision": 1,
-  "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
   "volumes": []
