@@ -1,4 +1,4 @@
-name: Java CI
+name: JpaShop CI/CD
 
 on:
   push:
