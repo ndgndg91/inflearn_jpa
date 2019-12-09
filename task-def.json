@@ -57,7 +57,7 @@
   "requiresCompatibilities": [
     "FARGATE"
   ],
-  "networkMode": "bridge",
+  "networkMode": "awsvpc",
   "inferenceAccelerators": [],
   "volumes": []
 }
