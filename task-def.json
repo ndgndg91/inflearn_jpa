@@ -3,16 +3,6 @@
   "containerDefinitions": [
     {
       "dnsSearchDomains": [],
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "secretOptions": [],
-        "options": {
-          "awslogs-group": "/ecs/jpashop-task-def",
-          "awslogs-region": "us-west-2",
-          "awslogs-stream-prefix": "ecs"
-        }
-      },
-      "entryPoint": [],
       "portMappings": [
         {
           "hostPort": 8080,
