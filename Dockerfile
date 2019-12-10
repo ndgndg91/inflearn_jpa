@@ -1,5 +1,19 @@
-FROM openjdk:8-jdk-alpine
+FROM openjdk:8-jdk-alpine as build
+WORKDIR /workspace/app
+
+COPY gradlew .
+COPY gradle gradle
+COPY build.gradle .
+RUN ./gradlew dependencies
+
+COPY src src
+RUN ./gradlew build unpack -x test
+RUN mkdir -p build/dependency && (cd build/dependency; jar -xf ../libs/*.jar)
+
+FROM openjdk:8-jre-alpine
 VOLUME /tmp
-ADD jpashop-0.0.1-SNAPSHOP.jar /app.jar
-RUN bash -c 'touch target/app.jar'
-ENTRYPOINT ["java","-jar","/app.jar"]
+ARG DEPENDENCY=/workspace/app/build/dependency
+COPY --from=build ${DEPENDENCY}/BOOT-INF/lib /app/lib
+COPY --from=build ${DEPENDENCY}/META-INF /app/META-INF
+COPY --from=build ${DEPENDENCY}/BOOT-INF/classes /app
+ENTRYPOINT ["java","-cp","app:app/lib/*","jpashop-0.0.1-SNAPSHOT.jar"]
