@@ -8,7 +8,7 @@
         "logDriver": "awslogs",
         "secretOptions": null,
         "options": {
-          "awslogs-group": "/ecs/first-run-task-definition",
+          "awslogs-group": "/ecs/ndgndg91-jpashop-task-def",
           "awslogs-region": "us-east-1",
           "awslogs-stream-prefix": "ecs"
         }
@@ -59,7 +59,7 @@
   "placementConstraints": [],
   "memory": "2048",
   "taskRoleArn": null,
-  "family": "first-run-task-definition",
+  "family": "ndgndg91-jpashop-task-def",
   "pidMode": null,
   "requiresCompatibilities": [
     "FARGATE"
