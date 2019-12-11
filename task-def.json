@@ -1,14 +1,15 @@
 {
-  "executionRoleArn": "arn:aws:iam::769353884036:role/SIXSHOP2-CSS-TASK-EXE",
+  "ipcMode": null,
+  "executionRoleArn": "arn:aws:iam::502697621694:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
-      "dnsSearchDomains": [],
+      "dnsSearchDomains": null,
       "logConfiguration": {
         "logDriver": "awslogs",
-        "secretOptions": [],
+        "secretOptions": null,
         "options": {
-          "awslogs-group": "/ecs/ndgndg91-jpashop-task-def",
-          "awslogs-region": "ap-northeast-2",
+          "awslogs-group": "/ecs/first-run-task-definition",
+          "awslogs-region": "us-east-1",
           "awslogs-stream-prefix": "ecs"
         }
       },
@@ -21,44 +22,95 @@
         }
       ],
       "command": [],
-      "linuxParameters": [],
-      "resourceRequirements": [
-      ],
-      "ulimits": [],
-      "dnsServers": [],
+      "linuxParameters": null,
+      "cpu": 1024,
+      "environment": [],
+      "resourceRequirements": null,
+      "ulimits": null,
+      "dnsServers": null,
       "mountPoints": [],
-      "secrets": [],
-      "dockerSecurityOptions": [],
-      "memoryReservation": 512,
+      "workingDirectory": null,
+      "secrets": null,
+      "dockerSecurityOptions": null,
+      "memory": null,
+      "memoryReservation": 2048,
       "volumesFrom": [],
-      "stopTimeout": 2,
-      "image": "769353884036.dkr.ecr.ap-northeast-2.amazonaws.com/ndgndg91-jpashop:latest",
-      "startTimeout": 2,
-      "dependsOn": [],
-      "interactive": true,
-      "healthCheck": {
-        "command": [
-          "CMD-SHELL", "curl -f http://localhost/ || exit 1"
-        ],
-        "interval": 300,
-        "timeout": 30,
-        "retries": 3,
-        "startPeriod": 0
-      },
+      "stopTimeout": null,
+      "image": "tomcat",
+      "startTimeout": null,
+      "firelensConfiguration": null,
+      "dependsOn": null,
+      "disableNetworking": null,
+      "interactive": null,
+      "healthCheck": null,
       "essential": true,
       "links": [],
-      "pseudoTerminal": true,
-      "name": "ndgndg91-jpashop-image-container"
+      "hostname": null,
+      "extraHosts": null,
+      "pseudoTerminal": null,
+      "user": null,
+      "readonlyRootFilesystem": null,
+      "dockerLabels": null,
+      "systemControls": null,
+      "privileged": null,
+      "name": "tomcat-webserver"
     }
   ],
   "placementConstraints": [],
-  "family": "ndgndg91-jpashop-task-def",
+  "memory": "2048",
+  "taskRoleArn": null,
+  "compatibilities": [
+    "EC2",
+    "FARGATE"
+  ],
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:502697621694:task-definition/first-run-task-definition:1",
+  "family": "first-run-task-definition",
+  "requiresAttributes": [
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.execution-role-awslogs"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.task-eni"
+    }
+  ],
+  "pidMode": null,
   "requiresCompatibilities": [
     "FARGATE"
   ],
   "networkMode": "awsvpc",
-  "cpu": "256",
-  "memory": "512",
+  "cpu": "1024",
+  "revision": 1,
+  "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
   "volumes": []
