@@ -62,7 +62,7 @@
   "family": "ndgndg91-jpashop-task-def",
   "pidMode": null,
   "requiresCompatibilities": [
-    "EC2"
+    "FARGATE"
   ],
   "networkMode": "awsvpc",
   "cpu": "1024",
