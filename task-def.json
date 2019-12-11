@@ -36,7 +36,7 @@
       "memoryReservation": 2048,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "tomcat",
+      "image": "502697621694.dkr.ecr.us-east-1.amazonaws.com/ndgndg91-jpashop:latest",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -53,7 +53,7 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "502697621694.dkr.ecr.us-east-1.amazonaws.com/ndgndg91-jpashop:latest"
+      "name": "ndgndg91-jpashop-image-container"
     }
   ],
   "placementConstraints": [],
