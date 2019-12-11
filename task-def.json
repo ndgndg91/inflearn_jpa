@@ -1,5 +1,5 @@
 {
-  "executionRoleArn": "arn:aws:iam::502697621694:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::769353884036:role/SIXSHOP2-CSS-TASK-EXE",
   "containerDefinitions": [
     {
       "dnsSearchDomains": [],
@@ -7,8 +7,8 @@
         "logDriver": "awslogs",
         "secretOptions": [],
         "options": {
-          "awslogs-group": "/ecs/ndgndg91-jpashop-job-def",
-          "awslogs-region": "us-west-2",
+          "awslogs-group": "/ecs/ndgndg91-jpashop-task-def",
+          "awslogs-region": "ap-northeast-2",
           "awslogs-stream-prefix": "ecs"
         }
       },
@@ -32,7 +32,7 @@
       "memoryReservation": 512,
       "volumesFrom": [],
       "stopTimeout": 2,
-      "image": "502697621694.dkr.ecr.us-west-2.amazonaws.com/ndgndg91-jpashop:latest",
+      "image": "769353884036.dkr.ecr.ap-northeast-2.amazonaws.com/ndgndg91-jpashop:latest",
       "startTimeout": 2,
       "dependsOn": [],
       "interactive": true,
@@ -52,13 +52,13 @@
     }
   ],
   "placementConstraints": [],
-  "family": "jpashop",
+  "family": "ndgndg91-jpashop-task-def",
   "requiresCompatibilities": [
     "FARGATE"
   ],
   "networkMode": "awsvpc",
-  "cpu": "512",
-  "memory": "1024",
+  "cpu": "256",
+  "memory": "512",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
   "volumes": []
