@@ -13,7 +13,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:us-east-1:769353884036:task-definition/ndgndg91-jpashop-task-def:1" # Specify the ARN of your task definition (arn:aws:ecs:region:account-id:task-definition/task-definition-family-name:task-definition-revision-number)
+        TaskDefinition: "arn:aws:ecs:ap-northeast-2:769353884036:task-definition/ndgndg91-jpashop-task-def:1" # Specify the ARN of your task definition (arn:aws:ecs:region:account-id:task-definition/task-definition-family-name:task-definition-revision-number)
         LoadBalancerInfo:
           ContainerName: "ndgndg91-jpashop-image-container" # Specify the name of your Amazon ECS application's container
           ContainerPort: "8080:8080" # Specify the port for your container where traffic reroutes
@@ -21,8 +21,8 @@ Resources:
         PlatformVersion: "1.3.0" # Specify the version of your Amazon ECS Service
         NetworkConfiguration:
           AwsvpcConfiguration:
-            Subnets: ["subnet-04c1436d80541540a","subnet-07f146d48e325222c"] # Specify one or more comma-separated subnets in your Amazon ECS service
-            SecurityGroups: ["sg-04c7e4a3c108c9ba6"] # Specify one or more comma-separated security groups in your Amazon ECS service
+            Subnets: ["subnet-03448410a08c16d0d","subnet-0aa216caac171a01a"] # Specify one or more comma-separated subnets in your Amazon ECS service
+            SecurityGroups: ["sg-0e94be1616bff1da0"] # Specify one or more comma-separated security groups in your Amazon ECS service
             AssignPublicIp: "ENABLED" # Specify "ENABLED" or "DISABLED"
 # (Optional) In the Hooks section, specify a validation Lambda function to run during
 # a lifecycle event.
