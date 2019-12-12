@@ -53,5 +53,5 @@ jobs:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
           service: ndgndg91-jpashop-service
           cluster: ndgndg91-jpashop-cluster
-          wait-for-service-stability: true
+          wait-for-service-stability: false
           codedeploy-appspec: appspec.yaml
