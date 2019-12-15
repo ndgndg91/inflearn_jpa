@@ -21,8 +21,8 @@ Resources:
         PlatformVersion: "1.3.0" # Specify the version of your Amazon ECS Service
         NetworkConfiguration:
           AwsvpcConfiguration:
-            Subnets: ["subnet-4c8f3e37"] # Specify one or more comma-separated subnets in your Amazon ECS service
-            SecurityGroups: ["sg-28f11748"] # Specify one or more comma-separated security groups in your Amazon ECS service
+            Subnets: ["subnet-18fa3e73"] # Specify one or more comma-separated subnets in your Amazon ECS service
+            SecurityGroups: ["sg-05d7cc3f849876e1e"] # Specify one or more comma-separated security groups in your Amazon ECS service
             AssignPublicIp: "ENABLED" # Specify "ENABLED" or "DISABLED"
 # (Optional) In the Hooks section, specify a validation Lambda function to run during
 # a lifecycle event.
