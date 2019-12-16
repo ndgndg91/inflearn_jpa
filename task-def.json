@@ -8,7 +8,7 @@
         "logDriver": "awslogs",
         "secretOptions": null,
         "options": {
-          "awslogs-group": "/ecs/ndgndg91-jpashop-task-def",
+          "awslogs-group": "/ecs/ndgndg91-jpashop-task-definition",
           "awslogs-region": "ap-northeast-2",
           "awslogs-stream-prefix": "ecs"
         }
@@ -59,7 +59,7 @@
   "placementConstraints": [],
   "memory": "2048",
   "taskRoleArn": null,
-  "family": "ndgndg91-jpashop-task-def",
+  "family": "ndgndg91-jpashop-task-definition",
   "pidMode": null,
   "requiresCompatibilities": [
     "FARGATE"
